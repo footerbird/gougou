@@ -965,6 +965,18 @@ input[type=radio]:checked:disabled+i{
                     &:hover{
                         color: @base-color;
                     }
+                    &.logout{
+                        color: #999;
+                        &:hover{
+                            color: @base-color;
+                        }
+                    }
+                    &.username{
+                        color: @base-color;
+                        &:hover{
+                            .underline;
+                        }
+                    }
                 }
             }
         }
@@ -1067,6 +1079,67 @@ input[type=radio]:checked:disabled+i{
             }
         }
     }
+    .user-nav{
+        width: 100%;
+        height: 91px;
+        border-bottom: 3px solid #f66d52;
+        .top-logo{
+            float: left;
+            width: 200px;
+            height: 88px;
+            background: url(../images/logo.png) no-repeat;
+        }
+        .nav-item{
+            float: left;
+            height: 88px;
+            padding-top: 30px;
+            line-height: 44px;
+            li{
+                float: left;
+                margin-left: 105px;
+                height: 58px;
+                position: relative;
+                a{
+                    display: block;
+                    font-size: 16px;
+                    color: #502c2c;
+                    &:hover{
+                        color: @base-color;
+                    }
+                }
+                &.cur{
+                    a{
+                        color: @base-color;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        border: 5px solid transparent;
+                        border-bottom-color: #f66d52;
+                        margin-left: -5px;
+                    }
+                }
+            }
+        }
+        .sales-enter {
+            float: right;
+            width: 183px;
+            height: 40px;
+            line-height: 39px;
+            text-align: center;
+            font-size: 16px;
+            color: @base-color;
+            background-color: #fff;
+            border: 1px solid @base-color;
+            margin-top: 24px;
+            &:hover{
+                color: #fff;
+                background-color: @base-color;
+            }
+        }
+    }
 }
 
 .footer{
@@ -1114,6 +1187,32 @@ input[type=radio]:checked:disabled+i{
         font-size: 12px;
         line-height: 28px;
         color: rgba(255,255,255,.5);
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
+
+.footer-console{
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    .about-link{
+        text-align: center;
+        padding-top: 15px;
+        a{
+            font-size: 14px;
+            line-height: 40px;
+            padding: 0 5px;
+            margin: 0 10px;
+            color: #666;
+            &:hover{
+                .underline;
+            }
+        }
+    }
+    .copyright{
+        font-size: 12px;
+        line-height: 28px;
+        color: #999;
         text-align: center;
         padding-bottom: 30px;
     }
@@ -3645,6 +3744,82 @@ input[type=radio]:checked:disabled+i{
                 .border-radius(2px);
                 &:hover{
                     opacity: .8;
+                }
+            }
+        }
+    }
+}
+
+.user-leftmenu{
+    float: left;
+    width: 154px;
+    padding-right: 10px;
+    .leftmenu-item{
+        padding: 10px 0;
+        border-bottom: 1px solid #f8f8f8;
+        .module{
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 32px;
+            font-size: 14px;
+            color: #999;
+            .module-account{
+                position: relative;
+                top: 4px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABcUlEQVQ4jeXUsWpUQRTG8V+ipS/gPoBgpbKNRBAJAQtBhcRCxGAhp/Ahoo8gdh5EiCBYBU02oEHtEpBwFRS0sxAbg2IrIqzF3sSby85mt/aDKeZ8fP85M/dw+e801dz0+/19ZmaexRLO1KVNLEXE1j7I1D/MdOmkzLyKp1jFsXqtYT0zr0zUYWYexSecj4g3rYNm0MPxiPg2boc3sNKGQX3dNVwfFiwBT+BVwYPXODUJ8M8I2EiVgO8xOyJ3Du8mAT7CfGZ220ZmnsZlPB4WLM5hZi7iLm5jpS7P4w5uRcSTPcg4c4gXeIt7+IrPuIhLTVhbh4cVM/MClrGBOXyIiJ2GP4fpiNg4EJiZswZveC0inhca+YVeZi5ExMumcai56XQ6RwxmLCJivXStbrf7paqqj3hYVdX9Xq/3e9drv+FNbEfEsxJsVxGxiu06s6c2cAEPDoI1tGzw5YvAkwa/qHG1WWeKwO8R8XMC4A5+NAt/AS9ocdXvzfm1AAAAAElFTkSuQmCC) no-repeat;
+            }
+            .module-order{
+                position: relative;
+                top: 4px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA9ElEQVQ4jeWQvUoEQRCEv/MnUFTuuFfxXTQUhFoM5MDEzMDQBxC6EAQjE1MDAxPBdzA8AwOThRMUTNZkgnW5HecwvIIJprv6o7ph6TRofyJiHzgHPoEXSXu2j4AqWZ4kHdu+AnaBTeCsqqrbufSImEbEqGkaSl5EjCJi2masdJi1pLp0veT95e8C/621eUXbO8AdsJ6ZvZB0XwSUNLN98AfwbZGEA2BM/iQ18F0EBLaACbCaAd4Aj0VASR/AYQbWq76Vt4Hrvn7SpaSH4oS2T8jf8L04YYK+ZmC96iYY2h6XDifvsF3rJjwFnm1/FTI30swy6wfOWWR3/Bn8uQAAAABJRU5ErkJggg==) no-repeat;
+            }
+            .module-wallet{
+                position: relative;
+                top: 4px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABDElEQVQ4jeXSr0uDURTG8c/EX2BQg9lgMdoEwaBFEASLGASbZ9Hi32DQYLG8N9lmFAwGw8Amos1/QMRiUhA1zTCH27spL3NJn3bvee73PId7+HcqNR9qtVpHU0ppBAcYjojNNkjpC9MCzLLsGON4/bwaxCLusIstvOMZEziMiEozsC/XbCoilrCNW7xhHdMRcYR9VCNiFStY+3HkLMtecIM5POC6g38eFxjADHbK5XKlYejPPTjHxqe5iPpwim+BIuKlIAyklB7zHXqqtoRFlFIawh4mMftrIJbVV+syX+h25CssqKf7fcKIuG+AUkonzbWef0oeONYFo+VN22KnlKp4KggbxVkXIf6SPgBY9js32brxswAAAABJRU5ErkJggg==) no-repeat;
+            }
+            .module-safe{
+                position: relative;
+                top: 4px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABf0lEQVQ4jeXUPWtUQRSH8d8mRkX8AhEJQRKLgJWFvQiKgSAWabT1rJ3xpRAsTKONFmIT7gFtjEpaqxBRsBBSWYmN9mksslUgzbVwxLvu3TXpBA8Mw5yXZ/4D5wz/nXWah7quBxIy8zQeo8adiPg0AOn8xrQCM3MGZ3G1hJZL7v1yXsX7iPg2ElhV1RdslbWJ9V9FDcWzOI8zOIbJbrc7N/C0Atyu69p+VlVV203GWCv5L5aZE8Ni+wZm5nF8zsyFtviBIUWnsICHEVE3/CewgdWIeLMXheNl38IlPM/M8QKbxQdUEbHcUtMK7GXmVER8xzlMY6304sei+FFD8TR6o4DvMA8R0cNFTPjZQjcjYuWP/Hm8HQVcwe3MPFSgO7iMuYh42UzMzMO4hadN/8CkZGaFsYi4ZohlZgfPsBsR15uT0tY2S5jKzBeZeaQFdhSvMFly+2zYLB/EAyyW/XW5/AruYg33ImKXPXwODTUncQMXimsdTyLia5+qTh/mH7cfw8qpfJNwvfsAAAAASUVORK5CYII=) no-repeat;
+            }
+            .module-service{
+                position: relative;
+                top: 4px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAB5ElEQVQ4jeXUPWzOURTH8c+/WNrGyyTVDizSwcIiSiKkmpDG5K0SA9ITDJiqibehk4bFgjuwGESaEEQIQhPERCSNxsQgEQaDoREvfQz/+zRPnqcPg9GZ7v+ec773/M69589/ZwVUKpUGR0ppJQ5iXc12Bc9wISJeNcCKohGYUmrFeXTjDMbRkd0fsR7DeIMjETHVFJhht/AAYxjBKkxmNd14iZPYjl5srUKLojC3rupzeJSTbmMoInbXtaI/+w7nQ87i0EyV1QpTSitwGbtwF70R8aG+TxnalVVswXXsjYiJoii01MQNYhSnMNwMBtl3HKdzzmDV15JPbMemLHeNso9/s5s59iH6MmOmwvtYhDa8i4jpv9FyzHu05tx7tcAOTGFa7muufH49KKW0sOazUL7Nr1hSC7yIX/iMZSmlOXn/RR2sLUuUY5biGzozowRGxGhELI+In3iCHZkxkVIaqGEewNO83onH6MOliBitllw/KZ3Ky+nPUsZy3Dx8yaDFuKO8yBvYExGTs45ehvYo3+QIrqELP/AJAziBfcp32B4RRyknpcUsFhHPsRFr8RZXcDWve5QjtxmrMVSb2/RvU1NtkSVWsAD7s9RxHIuI7zOwZpL/AN+GhA0R8breXxRFY9K/2m/JB6WzUGg8AAAAAABJRU5ErkJggg==) no-repeat;
+            }
+        }
+        .leftmenu-child{
+            a{
+                display: block;
+                height: 38px;
+                line-height: 38px;
+                padding-left: 32px;
+                font-size: 14px;
+                color: #333;
+                &:hover{
+                    color: @base-color;
                 }
             }
         }

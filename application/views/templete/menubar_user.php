@@ -19,37 +19,24 @@
       </div>
       <div class="bar-item">
         <ul>
-          <li><a href="/page/login">登录</a></li>
-          <li><a href="/page/register">注册</a></li>
-          <li><a href="javascript:;">帮助中心</a></li>
-          <li><a href="javascript:;">入驻流程</a></li>
+          <li><a href="/page/user_console" class="in-block username">陈有云</a><span class="f13 col-gray6">，欢迎您登录</span></li>
+          <li><a href="/page/home" class="logout">退出</a></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="top-search">
+  <div class="user-nav">
     <div class="container after-cls">
       <a href="/page/home" class="top-logo"></a>
-      <div class="search">
-        <input type="text" placeholder="请输入您要搜索的宠物" />
-        <input type="button" />
-      </div>
-      <a href="" class="sales-enter">商家入驻</a>
-    </div>
-  </div>
-  <div class="top-nav">
-    <div class="container after-cls">
-      <a href="/page/home" class="nav-home">宠物选购</a>
       <div class="nav-item">
         <ul>
-          <li class="cur"><a href="/page/pet_list">宠物交易</a></li>
-          <li><a href="/page/goods_list">宠物用品</a></li>
-          <li><a href="/page/shop_list">宠物店</a></li>
-          <li><a href="/page/hospital_list">宠物医院</a></li>
-          <li><a href="/page/market_list">花鸟市场</a></li>
-          <li><a href="/page/news_list">宠物百科</a></li>
+          <li class="cur"><a href="/page/user_console">个人管理中心</a></li>
+          <li><a href="/page/user_shop_collect">店铺收藏</a></li>
+          <li><a href="/page/user_recent_buy">最近购买</a></li>
+          <li><a href="/page/user_message">消息中心</a></li>
         </ul>
       </div>
+      <a href="" class="sales-enter">+ 申请商家店铺</a>
     </div>
   </div>
 </div>
